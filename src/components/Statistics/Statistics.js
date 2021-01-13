@@ -15,7 +15,7 @@ StatsItem.propTypes = {
 };
 
 const Stats = ({ data }) => (
-  <ul className={s["stat-list"]}>
+  <ul className={s.statList}>
     {data.map((stat) => (
       <StatsItem
         key={stat.id}

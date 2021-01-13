@@ -1,64 +1,51 @@
-%flex-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-%flex-raw {
-  display: flex;
-  justify-content: center;
-}
-%card {
-  width: 260px;
-  margin: 0 auto;
-  border-radius: 4px;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-  color: #9a9dac;
-}
-
 .profile {
-  @extend %flex-column;
-  @extend %card;
+  color: gray;
+  background-color: white;
+  text-align: center;
+  border: 1px solid rgb(149, 153, 160);
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  margin-bottom: 50px;
+  .avatar {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .name {
+    font-weight: 600;
+    font-size: 28px;
+    color: #505261;
+    margin-bottom: 10px;
+  }
 }
 .description {
-  @extend %flex-column;
+  display: flex;
   flex-direction: column;
   padding: 30px 0;
 }
-.avatar {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  margin-bottom: 30px;
-}
-.name {
-  font-weight: 700;
-  font-size: 18px;
-  color: #505261;
-  margin-bottom: 10px;
-}
+
 .tag {
   margin-bottom: 10px;
 }
 .stats {
-  @extend %flex-raw;
+  display: flex;
   background: rgb(240, 244, 253);
   list-style: none;
   width: 100%;
   border-radius: 0 0 4px 4px;
   & > li {
-    @extend %flex-column;
+    display: flex;
     flex-direction: column;
     width: calc(100% / 3);
     border: 1px solid rgb(224, 228, 236);
     border-bottom: none;
     border-left: none;
-    font-size: 10px;
+    font-size: 15px;
     padding: 20px 0;
     &:last-child {
       border-right: none;
