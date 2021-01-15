@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import s from "./FriendList.module.scss";
+import s from "./FriendListItem.module.scss";
 
-const FriendListItem = ({ avatar, name, isOnline }) => (
-  <li className={s.item}>
+const FriendListItem = ({ id, avatar, name, isOnline }) => (
+    <li key={id} className={s.item}>
     <span
       className={isOnline ? s.status + ` ${s.online}` : s.status}
     ></span>
@@ -22,16 +22,4 @@ FriendListItem.defaultProps = {
   isOnline: false,
 };
 
-const FriendList = ({ friends }) => (
-  <ul className={s.friendList}>
-    {friends.map((friend) => (
-      <FriendListItem key={friend.id} {...friend} />
-    ))}
-  </ul>
-);
-
-FriendList.propTypes = {
-  friends: PropTypes.array.isRequired,
-};
-
-export default FriendList;
+export default FriendListItem;

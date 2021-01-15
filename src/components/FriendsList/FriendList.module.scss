@@ -1,42 +1,4 @@
-%card {
+.friendList {
   width: 300px;
   margin: 0 auto;
-  border-radius: 4px;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: #9a9dac;
-}
-
-.friendList {
-  & .item {
-    @extend %card;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 6px 12px;
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
-  }
-  & .avatar {
-    width: 70px;
-    height: 70px;
-    border-radius: 10px;
-    margin-right: 10px;
-    object-fit: cover;
-    border: 1px solid #ccc;
-  }
-  & .status {
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: red;
-    &.online {
-      background: green;
-    }
-  }
 }
